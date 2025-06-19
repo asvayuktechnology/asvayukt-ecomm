@@ -100,9 +100,6 @@ const Footer = () => {
           </div>
         </div>
 
-        
-            <AccordionCom/>
-
       </footer>
     </>
   );
