@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import FooterLinks from "./FooterLinks";
-import paymentLogo from "../../../public/images/payment-logo.webp"
-
+import paymentLogo from "../../../public/images/payment-logo.webp";
 
 const Footer = () => {
   const features = [
@@ -141,7 +140,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-white">
-        <div className="relative mx-auto max-w-screen-2xl py-6 px-3 sm:px-10">
+        <div className="hidden lg:block relative mx-auto max-w-screen-2xl py-6 px-3 sm:px-10">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 mx-auto">
             {features.map((feature, idx) => (
               <div
@@ -192,7 +191,9 @@ const Footer = () => {
                         src="https://res.cloudinary.com/ahossain/image/upload/v1697688576/settings/logo-color_el4zmy.svg"
                         style="color: transparent;"
                       /> */}
-                      <h1 className="text-xl font-bold text-[#10b981]">Asvayuk Ecommerce</h1>
+                      <h1 className="text-xl font-bold text-[#10b981]">
+                        Asvayuk Ecommerce
+                      </h1>
                     </div>
                   </Link>
                   <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
@@ -210,7 +211,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr class="hr-line" />
+        <hr className="hr-line" />
 
         <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 bg-gray-50 border border-gray-50 rounded-lg">
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-8 items-center justify-between">

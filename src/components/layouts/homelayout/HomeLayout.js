@@ -1,12 +1,11 @@
-import Footer from "@/components/footer/Footer";
 import React from "react";
+import Footer from "@/components/footer/Footer";
 
-const HomeLayout = () => {
+const HomeLayout = ({ children }) => {
   return (
     <>
       <div>header</div>
-
-      {/* Footer */}
+      <main>{children}</main>
       <Footer />
     </>
   );
