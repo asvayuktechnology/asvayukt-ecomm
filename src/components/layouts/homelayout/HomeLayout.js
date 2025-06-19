@@ -1,17 +1,15 @@
-import React from 'react'
+import Footer from "@/components/footer/Footer";
+import React from "react";
 
 const HomeLayout = () => {
   return (
     <>
-    <div>
-        header
-    </div>
+      <div>header</div>
 
-    <div>
-        Footer
-    </div>
+      {/* Footer */}
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default HomeLayout
+export default HomeLayout;
