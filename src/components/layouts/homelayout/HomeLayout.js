@@ -6,8 +6,9 @@ const HomeLayout = ({ children }) => {
   return (
     <>
       <Header/>
-
-      {/* Footer */}
+        <main>
+          {children}
+        </main>
       <Footer />
     </>
   );
