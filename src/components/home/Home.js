@@ -7,6 +7,7 @@ import ProductCard from "../productsInfo/ProductCard";
 import deliveryBoy from "../../../public/images/delivery-boy.png";
 import couponCode from "../../../public/images/ins1.jpg";
 import BannerCarousel from "../ui/common/carousel/BannerCarousel";
+import ProductModalCard from "../productsInfo/ProductModalCard";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -194,6 +195,10 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="py-5 mx-auto max-w-screen-2xl">
+          <ProductModalCard />
+        </div>
+
         <FeaturedCategories />
 
         <div className="bg-gray-50">
@@ -285,6 +290,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
+
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
