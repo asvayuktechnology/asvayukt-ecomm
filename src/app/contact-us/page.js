@@ -1,10 +1,9 @@
 "use client";
-import HomeLayout from "@/components/layouts/homelayout/HomeLayout";
-import React from "react";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
+import HomeLayout from "@/components/layouts/homelayout/HomeLayout";
 import { FiMail, FiUser, FiMapPin } from "react-icons/fi";
-import contactImg from "../../../public/images/contact-us.png"
+import contactImg from "../../../public/images/contact-us.png";
 
 const page = () => {
   const [formData, setFormData] = useState({
@@ -30,9 +29,7 @@ const page = () => {
   return (
     <>
       <HomeLayout>
-        <div
-          className="bannerbg flex justify-center py-10 lg:py-20 bg-indigo-100 w-full bg-cover bg-no-repeat bg-bottom"
-        >
+        <div className="bannerbg flex justify-center py-10 lg:py-20 bg-indigo-100 w-full bg-cover bg-no-repeat bg-bottom">
           <div className="flex mx-auto w-full max-w-screen-2xl px-3 sm:px-10">
             <div className="w-full flex justify-center flex-col relative">
               <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-serif text-center text-black">
