@@ -14,7 +14,7 @@ const ProductModalCard = () => {
 
   return (
     <>
-      <Button onClick={() => setOpenModal(true)}>Toggle modal</Button>
+      <Button onClick={() => setOpenModal(true)}> Toggle modal</Button>
 
       <Modal
         show={openModal}
