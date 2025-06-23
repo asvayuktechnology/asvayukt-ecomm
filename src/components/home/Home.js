@@ -1,10 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { CarouselCom } from "../ui/common/carousel/Carousel";
+import { useEffect, useState } from "react";
 import FeaturedCategories from "./FeaturedCategories";
 import ProductCard from "../productsInfo/ProductCard";
-import Link from "next/link";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -26,7 +25,7 @@ const Home = () => {
         <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
           <div className="w-full hidden lg:flex">
             <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5 rounded-lg overflow-hidden">
-              <CarouselCom />
+              {/* <CarouselCom /> */}
             </div>
             <div className="w-full group">
               <div className="bg-gray-50 h-full border-2 border-orange-500 transition duration-150 ease-linear transform group-hover:border-emerald-500 rounded shadow">
@@ -302,7 +301,7 @@ const Home = () => {
         </div>
 
         <div className="w-full">
-          <section
+          <div
             id="downloadApp"
             className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden"
           >
@@ -369,7 +368,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </section>
     </>

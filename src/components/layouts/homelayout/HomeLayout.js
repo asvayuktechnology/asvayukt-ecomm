@@ -5,10 +5,8 @@ import Header from "@/components/header/Header";
 const HomeLayout = ({ children }) => {
   return (
     <>
-      <Header/>
-        <main>
-          {children}
-        </main>
+      <Header />
+      <main>{children}</main>
       <Footer />
     </>
   );
