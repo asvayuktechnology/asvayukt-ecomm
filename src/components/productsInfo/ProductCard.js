@@ -47,7 +47,7 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
           </div>
 
           <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-            <div className="font-serif product-price font-bold">
+            <div className=" product-price font-bold">
               <span className="inline-block text-lg font-semibold text-gray-800">
                 ${price}
               </span>
@@ -99,12 +99,12 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
               <div className="w-full flex flex-col p-5 md:p-8 text-left">
                 <div className="mb-2 md:mb-2.5 block -mt-1.5">
                   <Link href="/product/premium-t-shirt">
-                    <h1 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold font-serif hover:text-black cursor-pointer">
+                    <h1 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold  hover:text-black cursor-pointer">
                       Premium T-Shirt
                     </h1>
                   </Link>
                   <div className="relative">
-                    <span className="bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center px-2 py-0 text-xs font-semibold font-serif">
+                    <span className="bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center px-2 py-0 text-xs font-semibold ">
                       Stock :
                       <span className="text-orange-700 pl-1 font-bold">
                         550
@@ -119,13 +119,13 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
                 </p>
 
                 <div className="flex items-center my-4">
-                  <div className="font-serif product-price font-bold">
+                  <div className=" product-price font-bold">
                     <span className="inline-block text-2xl">$450.00</span>
                   </div>
                 </div>
 
                 <div className="mb-1">
-                  <h4 className="text-sm py-1 font-serif text-gray-700 font-bold">
+                  <h4 className="text-sm py-1  text-gray-700 font-bold">
                     Color:
                   </h4>
                   <select className="focus:shadow-none w-3/4 px-2 py-1 form-select outline-none h-10 text-sm block rounded-md bg-gray-100 border-transparent focus:bg-white border-emerald-600 focus:border-emerald-400">
@@ -135,7 +135,7 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
                     <option>Blue</option>
                   </select>
 
-                  <h4 className="text-sm py-1 font-serif text-gray-700 font-bold">
+                  <h4 className="text-sm py-1  text-gray-700 font-bold">
                     Size:
                   </h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -146,7 +146,7 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
                           size === "Small"
                             ? "bg-emerald-500 text-white"
                             : "bg-gray-100 text-gray-600"
-                        } mr-2 border-0 rounded-full inline-flex items-center justify-center px-3 py-1 text-xs font-serif mt-2`}
+                        } mr-2 border-0 rounded-full inline-flex items-center justify-center px-3 py-1 text-xs  mt-2`}
                       >
                         {size}
                       </button>
@@ -189,7 +189,7 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
                         </svg>
                       </button>
                     </div>
-                    <button className="text-sm font-semibold font-serif text-white bg-emerald-500 hover:bg-emerald-600 px-4 ml-4 md:px-6 lg:px-8 py-4 w-full h-12">
+                    <button className="text-sm font-semibold  text-white bg-emerald-500 hover:bg-emerald-600 px-4 ml-4 md:px-6 lg:px-8 py-4 w-full h-12">
                       Add to Cart
                     </button>
                   </div>
@@ -198,10 +198,10 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
                 <div className="flex items-center mt-4">
                   <div className="flex items-center justify-between space-s-3 sm:space-s-4 w-full">
                     <div>
-                      <span className="font-serif font-semibold text-sm">
+                      <span className=" font-semibold text-sm">
                         <span className="text-gray-700">Category:</span>
                         <Link href="/search?category=men&_id=632ab2b64d87ff2494210aa7">
-                          <button className="text-gray-600 font-serif font-medium underline ml-2 hover:text-teal-600">
+                          <button className="text-gray-600  font-medium underline ml-2 hover:text-teal-600">
                             men
                           </button>
                         </Link>
@@ -211,7 +211,7 @@ export default function ProductCard({ title, price, stock, imageUrl }) {
                           (tag, idx) => (
                             <span
                               key={idx}
-                              className="bg-gray-50 mr-2 text-gray-600 rounded-full inline-flex items-center justify-center px-3 py-1 text-xs font-semibold font-serif mt-2"
+                              className="bg-gray-50 mr-2 text-gray-600 rounded-full inline-flex items-center justify-center px-3 py-1 text-xs font-semibold  mt-2"
                             >
                               {tag}
                             </span>

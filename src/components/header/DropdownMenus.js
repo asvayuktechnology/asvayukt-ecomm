@@ -23,7 +23,7 @@ export default function DropdownMenus({categories,menuTitle}) {
       <div
         onClick={() => setIsOpen(!isOpen)}
         type="button"
-        className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600 rounded-lg inline-flex items-center cursor-pointer text-black"
+        className=" py-2 text-sm font-medium hover:text-emerald-600 rounded-lg inline-flex items-center cursor-pointer text-black"
       >
         {menuTitle}
         <svg

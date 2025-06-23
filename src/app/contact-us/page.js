@@ -32,7 +32,7 @@ const page = () => {
         <div className="bannerbg flex justify-center py-10 lg:py-20 bg-indigo-100 w-full bg-cover bg-no-repeat bg-bottom">
           <div className="flex mx-auto w-full max-w-screen-2xl px-3 sm:px-10">
             <div className="w-full flex justify-center flex-col relative">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-serif text-center text-black">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold  text-center text-black">
                 Contact Us
               </h2>
             </div>
@@ -41,7 +41,7 @@ const page = () => {
 
         <div className="bg-white">
           <div className="max-w-screen-2xl mx-auto lg:py-20 py-10 px-4 sm:px-10">
-            <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8 font-serif">
+            <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8 ">
               <div className="border p-10 rounded-lg text-center">
                 <span className="flex justify-center text-4xl text-emerald-500 mb-4">
                   <FiMail />
@@ -108,7 +108,7 @@ const page = () => {
                   className="w-full mx-auto flex flex-col justify-center"
                 >
                   <div className="mb-12">
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold font-serif mb-3 text-black">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold  mb-3 text-black">
                       For any support just send your query
                     </h3>
                     <p className="text-base opacity-90 leading-7  text-black">
