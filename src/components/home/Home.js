@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import FeaturedCategories from "./FeaturedCategories";
 import ProductCard from "../productsInfo/ProductCard";
+import BannerCarousel from "../ui/common/carousel/BannerCarousel";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -25,12 +26,12 @@ const Home = () => {
         <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
           <div className="w-full hidden lg:flex">
             <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5 rounded-lg overflow-hidden">
-              {/* <CarouselCom /> */}
+              <BannerCarousel />
             </div>
             <div className="w-full group">
               <div className="bg-gray-50 h-full border-2 border-orange-500 transition duration-150 ease-linear transform group-hover:border-emerald-500 rounded shadow">
                 <div className="bg-orange-100 text-gray-900 px-6 py-2 rounded-t border-b flex items-center justify-center">
-                  <h3 className="text-base font-serif font-medium">
+                  <h3 className="text-base  font-medium">
                     Latest Super Discount Active Coupon Code
                   </h3>
                 </div>
@@ -48,7 +49,7 @@ const Home = () => {
                         />
                       </figure>
                       <div className="ml-3">
-                        <div className="flex items-center font-serif">
+                        <div className="flex items-center ">
                           <h6 className="pl-1 text-base font-medium text-gray-600">
                             <span className="text-lg md:text-xl lg:text-xl text-red-500 font-bold">
                               50%
@@ -61,7 +62,7 @@ const Home = () => {
                             </span>
                           </div>
                         </div>
-                        <h2 className="pl-1 font-serif text-base text-gray-700 leading-6 font-semibold mb-2">
+                        <h2 className="pl-1  text-base text-gray-700 leading-6 font-semibold mb-2">
                           August Gift Voucher
                         </h2>
                         <span className="inline-block mb-2">
@@ -69,7 +70,7 @@ const Home = () => {
                             {["00", "00", "00", "00"].map((item, index) => (
                               <span
                                 key={index}
-                                className="flex items-center justify-center bg-red-500 text-white text-sm font-serif font-semibold mx-1 px-2 py-1 rounded"
+                                className="flex items-center justify-center bg-red-500 text-white text-sm  font-semibold mx-1 px-2 py-1 rounded"
                               >
                                 {item}
                               </span>
@@ -83,9 +84,9 @@ const Home = () => {
                       <div className="info flex items-center">
                         <div className="w-full">
                           <div className="block">
-                            <div className="font-serif border border-dashed bg-emerald-50 py-1 border-emerald-300 rounded-lg text-center block">
+                            <div className=" border border-dashed bg-emerald-50 py-1 border-emerald-300 rounded-lg text-center block">
                               <button className="block w-full">
-                                <span className="uppercase font-serif font-semibold text-sm leading-7 text-emerald-600">
+                                <span className="uppercase  font-semibold text-sm leading-7 text-emerald-600">
                                   AUGUST24
                                 </span>
                               </button>
@@ -112,7 +113,7 @@ const Home = () => {
                         />
                       </figure>
                       <div className="ml-3">
-                        <div className="flex items-center font-serif">
+                        <div className="flex items-center ">
                           <h6 className="pl-1 text-base font-medium text-gray-600">
                             <span className="text-lg md:text-xl lg:text-xl text-red-500 font-bold">
                               10%
@@ -125,7 +126,7 @@ const Home = () => {
                             </span>
                           </div>
                         </div>
-                        <h2 className="pl-1 font-serif text-base text-gray-700 leading-6 font-semibold mb-2">
+                        <h2 className="pl-1  text-base text-gray-700 leading-6 font-semibold mb-2">
                           Summer Gift Voucher
                         </h2>
                         <span className="inline-block mb-2">
@@ -133,7 +134,7 @@ const Home = () => {
                             {["00", "00", "00", "00"].map((item, index) => (
                               <span
                                 key={index}
-                                className="flex items-center justify-center bg-red-500 text-white text-sm font-serif font-semibold mx-1 px-2 py-1 rounded"
+                                className="flex items-center justify-center bg-red-500 text-white text-sm  font-semibold mx-1 px-2 py-1 rounded"
                               >
                                 {item}
                               </span>
@@ -147,9 +148,9 @@ const Home = () => {
                       <div className="info flex items-center">
                         <div className="w-full">
                           <div className="block">
-                            <div className="font-serif border border-dashed bg-emerald-50 py-1 border-emerald-300 rounded-lg text-center block">
+                            <div className=" border border-dashed bg-emerald-50 py-1 border-emerald-300 rounded-lg text-center block">
                               <button className="block w-full">
-                                <span className="uppercase font-serif font-semibold text-sm leading-7 text-emerald-600">
+                                <span className="uppercase  font-semibold text-sm leading-7 text-emerald-600">
                                   SUMMER24
                                 </span>
                               </button>
@@ -171,7 +172,7 @@ const Home = () => {
           <div className="bg-orange-100 px-10 py-6 rounded-lg mt-6">
             <div className="flex justify-between items-center">
               <div>
-                <h1 className="font-serif text-xl">
+                <h1 className=" text-xl">
                   <span className="text-emerald-600 font-bold">
                     100% Natural Quality Organic Product
                   </span>{" "}
@@ -182,7 +183,7 @@ const Home = () => {
                 </p>
               </div>
               <a
-                className="text-sm font-serif font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700"
+                className="text-sm  font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700"
                 href="/search?category=breakfast"
               >
                 Shop Now
@@ -197,7 +198,7 @@ const Home = () => {
           <div className=" lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
-                <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold text-black">
+                <h2 className="text-xl lg:text-2xl mb-2  font-semibold text-black">
                   Popular Products for Daily Shopping
                 </h2>
                 <p className="text-base font-sans text-gray-600 leading-6">
@@ -235,7 +236,7 @@ const Home = () => {
                     <span className="text-base lg:text-lg text-black">
                       Organic Products and Food
                     </span>
-                    <h2 className="font-serif text-lg lg:text-2xl font-bold mb-1 text-black">
+                    <h2 className=" text-lg lg:text-2xl font-bold mb-1 text-black">
                       Quick Delivery to Your Home
                     </h2>
                     <p className="text-sm font-sans leading-6 text-black">
@@ -246,7 +247,7 @@ const Home = () => {
                     </p>
                     <Link
                       href="/#"
-                      className="lg:w-1/3 text-xs font-serif font-medium inline-block mt-5 px-8 py-3 bg-emerald-500 text-center text-white rounded-full hover:text-white"
+                      className="lg:w-1/3 text-xs  font-medium inline-block mt-5 px-8 py-3 bg-emerald-500 text-center text-white rounded-full hover:text-white"
                     >
                       Download App
                     </Link>
@@ -272,7 +273,7 @@ const Home = () => {
           <div className=" lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
-                <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold text-black">
+                <h2 className="text-xl lg:text-2xl mb-2  font-semibold text-black">
                   Popular Products for Daily Shopping
                 </h2>
                 <p className="text-base font-sans text-gray-600 leading-6">
@@ -318,7 +319,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3 text-black">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold  mb-3 text-black">
                     Get Your Daily Needs From Our KachaBazar Store
                   </h3>
                   <p className="text-base opacity-90 leading-7 text-black">

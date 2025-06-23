@@ -45,7 +45,7 @@ const page = () => {
         >
           <div className="flex mx-auto w-full max-w-screen-2xl px-3 sm:px-10">
             <div className="w-full flex justify-center flex-col relative">
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-serif text-center text-black">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold  text-center text-black">
                 About Us
               </h2>
             </div>
@@ -56,7 +56,7 @@ const page = () => {
           <div className="max-w-screen-2xl mx-auto lg:py-20 py-10 px-4 sm:px-10">
             <div className="grid grid-flow-row lg:grid-cols-2 gap-4 lg:gap-16 items-center">
               <div>
-                <h3 className="text-xl lg:text-3xl mb-2 font-serif font-semibold text-black">
+                <h3 className="text-xl lg:text-3xl mb-2  font-semibold text-black">
                   Welcome to our KachaBazar shop
                 </h3>
                 <div className="mt-3 text-base opacity-90 leading-7 text-black">
@@ -80,10 +80,10 @@ const page = () => {
 
                 <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-2 xl:gap-6 mt-8">
                   <div className="p-8 bg-indigo-50 shadow-sm rounded-lg">
-                    <span className="text-3xl block font-extrabold font-serif mb-4 text-gray-800">
+                    <span className="text-3xl block font-extrabold  mb-4 text-gray-800">
                       8K
                     </span>
-                    <h4 className="text-lg font-serif font-bold mb-1 text-black">
+                    <h4 className="text-lg  font-bold mb-1 text-black">
                       Lovely Customer
                     </h4>
                     <p className="mb-0 opacity-90 leading-7 text-black">
@@ -91,10 +91,10 @@ const page = () => {
                     </p>
                   </div>
                   <div className="p-8 bg-indigo-50 shadow-sm rounded-lg">
-                    <span className="text-3xl block font-extrabold font-serif mb-4 text-gray-800">
+                    <span className="text-3xl block font-extrabold  mb-4 text-gray-800">
                       10K
                     </span>
-                    <h4 className="text-lg font-serif font-bold mb-1 text-black">
+                    <h4 className="text-lg  font-bold mb-1 text-black">
                       Listed Products
                     </h4>
                     <p className="mb-0 opacity-90 leading-7 text-black">
@@ -164,7 +164,7 @@ const page = () => {
             <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
               <div className="relative flex flex-col sm:flex-row sm:items-end justify-between mb-8">
                 <div className="max-w-2xl">
-                  <h3 className="text-xl lg:text-3xl mb-2 font-serif font-semibold text-black">
+                  <h3 className="text-xl lg:text-3xl mb-2  font-semibold text-black">
                     Our Team
                   </h3>
                   <p className="mt-2 md:mt-3 font-normal block text-base text-black">
@@ -186,7 +186,7 @@ const page = () => {
                       className="block rounded-lg"
                     />
                     <div className="py-4">
-                      <h5 className="text-lg font-semibold font-serif text-black">
+                      <h5 className="text-lg font-semibold  text-black">
                         {member.name}
                       </h5>
                       <span className="opacity-75 text-sm text-black">
@@ -218,7 +218,7 @@ const page = () => {
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3 text-black">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold  mb-3 text-black">
                     Get Your Daily Needs From Our KachaBazar Store
                   </h3>
                   <p className="text-base opacity-90 leading-7 text-black">

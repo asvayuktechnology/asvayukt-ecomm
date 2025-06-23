@@ -76,7 +76,7 @@ const FeaturedCategories = () => {
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
         <div className="mb-10 flex justify-center">
           <div className="w-full lg:w-2/5 text-center">
-            <h2 className="text-xl lg:text-2xl font-serif font-semibold mb-2 text-black">
+            <h2 className="text-xl lg:text-2xl  font-semibold mb-2 text-black">
               Featured Categories
             </h2>
             <p className="text-base text-gray-600 leading-6 font-sans">
@@ -103,7 +103,7 @@ const FeaturedCategories = () => {
                     {cat.sub.map((item, subIndex) => (
                       <li
                         key={subIndex}
-                        className="text-xs text-gray-400 font-serif flex items-center transition-all duration-150 hover:ml-2"
+                        className="text-xs text-gray-400  flex items-center transition-all duration-150 hover:ml-2"
                       >
                         <span className="text-xs mr-1">
                           <svg

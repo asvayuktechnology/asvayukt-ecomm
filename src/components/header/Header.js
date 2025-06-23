@@ -255,7 +255,7 @@ const Header = () => {
                 aria-label="Login"
               >
                 <Link
-                  className="leading-none font-bold font-serif block"
+                  className="leading-none font-bold  block"
                   href="/user/dashboard"
                 >
                   J
@@ -273,7 +273,7 @@ const Header = () => {
                   <div className="flex justify-between items-center md:justify-start md:space-x-10">
                     <nav className="md:flex space-x-10 items-center">
                       <div
-                        className="relative font-serif"
+                        className="relative "
                         data-headlessui-state=""
                       >
                         <DropdownMenus
@@ -282,19 +282,19 @@ const Header = () => {
                         />
                       </div>
                       <Link
-                        className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600 text-black"
+                        className=" py-2 text-sm font-medium hover:text-emerald-600 text-black"
                         href="/about-us"
                       >
                         About Us
                       </Link>
                       <Link
-                        className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600  text-black"
+                        className=" py-2 text-sm font-medium hover:text-emerald-600  text-black"
                         href="/contact-us"
                       >
                         Contact Us
                       </Link>
                       <Link
-                        className="relative inline-flex items-center  bg-red-100 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-emerald-600"
+                        className="relative inline-flex items-center  bg-red-100  ml-4 py-0 px-2 rounded text-sm font-medium text-red-500 hover:text-emerald-600"
                         href="/offer"
                       >
                         Offers
@@ -312,13 +312,13 @@ const Header = () => {
             </div>
             <div className="flex">
               <Link
-                className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600 text-black"
+                className=" py-2 text-sm font-medium hover:text-emerald-600 text-black"
                 href="/privacy-policy"
               >
                 Privacy Policy
               </Link>
               <Link
-                className="font-serif mx-4 py-2 text-sm font-medium hover:text-emerald-600 text-black"
+                className=" py-2 text-sm font-medium hover:text-emerald-600 text-black"
                 href="/terms-and-conditions"
               >
                 Terms &amp; Conditions

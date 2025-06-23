@@ -149,7 +149,7 @@ const Footer = () => {
               >
                 <div className="mr-3">{feature.icon}</div>
                 <div>
-                  <span className="block font-serif text-sm font-medium leading-5 text-black">
+                  <span className="block  text-sm font-medium leading-5 text-black">
                     {feature.text}
                   </span>
                 </div>
