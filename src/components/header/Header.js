@@ -256,7 +256,7 @@ const Header = () => {
               >
                 <Link
                   className="leading-none font-bold  block"
-                  href="/user/dashboard"
+                  href="/login"
                 >
                   J
                 </Link>
@@ -312,13 +312,13 @@ const Header = () => {
             </div>
             <div className="flex">
               <Link
-                className=" py-2 text-sm font-medium hover:text-emerald-600 text-black"
+                className="mx-4 py-2 text-sm font-medium hover:text-emerald-600 text-black"
                 href="/privacy-policy"
               >
                 Privacy Policy
               </Link>
               <Link
-                className=" py-2 text-sm font-medium hover:text-emerald-600 text-black"
+                className="mx-4 py-2 text-sm font-medium hover:text-emerald-600 text-black"
                 href="/terms-and-conditions"
               >
                 Terms &amp; Conditions
