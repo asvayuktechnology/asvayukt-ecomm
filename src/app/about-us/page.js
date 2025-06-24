@@ -1,38 +1,45 @@
-import HomeLayout from "@/components/layouts/homelayout/HomeLayout";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import HomeLayout from "@/components/layouts/homelayout/HomeLayout";
+import aboutbottom from "../../../public/images/aboutbottom.jpg";
+import aboutTop from "../../../public/images/aboutTop.webp";
+import team1 from "../../../public/images/team-img/team-1.webp";
+import team2 from "../../../public/images/team-img/team-2.webp";
+import team3 from "../../../public/images/team-img/team-3.webp";
+import team4 from "../../../public/images/team-img/team-4.webp";
+import team5 from "../../../public/images/team-img/team-5.jpg";
+import team6 from "../../../public/images/team-img/team-6.jpg";
 
 const team = [
   {
     name: "Niamh Shea",
     role: "Co-founder & Executive",
-    img: "https://res.cloudinary.com/ahossain/image/upload/v1697439688/settings/team-1_acjmv7.webp",
+    img: team1,
   },
   {
     name: "Orla Dwyer",
     role: "Orla Dwyer",
-    img: "https://res.cloudinary.com/ahossain/image/upload/v1697439689/settings/team-2_dw7zs1.webp",
+    img: team2,
   },
   {
     name: "Danien James",
     role: "Co-founder, Chairman",
-    img: "https://res.cloudinary.com/ahossain/image/upload/v1697439689/settings/team-3_ld3323.webp",
+    img: team3,
   },
   {
     name: "Dara Frazier",
     role: "Chief Strategy Officer",
-    img: "https://res.cloudinary.com/ahossain/image/upload/v1697439689/settings/team-4_i7jvx7.webp",
+    img: team4,
   },
   {
     name: "Glenda Arvidson",
     role: "HR Officer",
-    img: "https://res.cloudinary.com/ahossain/image/upload/v1697439689/settings/team-5_ylyklw.webp",
+    img: team5,
   },
   {
     name: "Melvin Davis",
     role: "Lead Developer",
-    img: "https://res.cloudinary.com/ahossain/image/upload/v1697439689/settings/team-6_gmlts4.webp",
+    img: team6,
   },
 ];
 
@@ -40,9 +47,7 @@ const page = () => {
   return (
     <>
       <HomeLayout>
-        <div
-          className="bannerbg flex justify-center py-10 lg:py-20 bg-indigo-100 w-full bg-cover bg-no-repeat bg-bottom"
-        >
+        <div className="bannerbg flex justify-center py-10 lg:py-20 bg-indigo-100 w-full bg-cover bg-no-repeat bg-bottom">
           <div className="flex mx-auto w-full max-w-screen-2xl px-3 sm:px-10">
             <div className="w-full flex justify-center flex-col relative">
               <h2 className="text-xl md:text-3xl lg:text-4xl font-bold  text-center text-black">
@@ -108,7 +113,7 @@ const page = () => {
                 <Image
                   width={920}
                   height={750}
-                  src="https://res.cloudinary.com/ahossain/image/upload/v1697439245/settings/v7g6gowiju0wanpwx70f.jpg"
+                  src={aboutTop}
                   alt="About Us Banner"
                   className="rounded-lg"
                 />
@@ -153,7 +158,7 @@ const page = () => {
               <Image
                 width={1920}
                 height={570}
-                src="https://res.cloudinary.com/ahossain/image/upload/v1697439195/settings/sl8vzvzm54jgzq6sphn2.jpg"
+                src={aboutbottom}
                 alt="Promo Banner"
                 className="block rounded-lg"
               />
@@ -195,77 +200,6 @@ const page = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full">
-          <div
-            id="downloadApp"
-            className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden"
-          >
-            <div className="max-w-screen-2xl mx-auto px-4 sm:px-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-center">
-                <div className="hidden md:flex lg:justify-start">
-                  <Image
-                    src="https://res.cloudinary.com/ahossain/image/upload/v1697688091/settings/app-download-img-left_s5n2zf.webp"
-                    alt="app download"
-                    width={500}
-                    height={394}
-                    className="w-auto"
-                    priority
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold  mb-3 text-black">
-                    Get Your Daily Needs From Our KachaBazar Store
-                  </h3>
-                  <p className="text-base opacity-90 leading-7 text-black">
-                    There are many products you will find in our shop. Choose
-                    your daily necessary product from our KachaBazar shop and
-                    get some special offers.
-                  </p>
-                  <div className="mt-8 flex justify-center">
-                    <Link
-                      href="https://www.apple.com/app-store/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mx-2"
-                    >
-                      <Image
-                        src="https://res.cloudinary.com/ahossain/image/upload/v1697688165/settings/app-store_cyyc0f.svg"
-                        alt="app store"
-                        className="h-auto"
-                        width="350"
-                        height="350"
-                      />
-                    </Link>
-                    <Link
-                      href="https://play.google.com/store/games"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Image
-                        src="https://res.cloudinary.com/ahossain/image/upload/v1697688167/settings/play-store_cavwua.svg"
-                        alt="play store"
-                        className="h-auto"
-                        width="350"
-                        height="350"
-                      />
-                    </Link>
-                  </div>
-                </div>
-                <div className="hidden md:flex lg:justify-end">
-                  <Image
-                    src="https://res.cloudinary.com/ahossain/image/upload/v1697688091/settings/app-download-img_c7xqg4.webp"
-                    alt="app download"
-                    width={500}
-                    height={394}
-                    className="w-auto"
-                    priority
-                  />
-                </div>
               </div>
             </div>
           </div>

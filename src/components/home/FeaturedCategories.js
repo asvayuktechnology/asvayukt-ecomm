@@ -1,4 +1,3 @@
-// components/FeaturedCategories.js
 import React from "react";
 
 const categories = [

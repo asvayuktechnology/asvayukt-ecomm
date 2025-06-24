@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import FooterLinks from "./FooterLinks";
-import paymentLogo from "../../../public/images/payment-logo.webp";
+import FooterStore from "./FooterStore";
+import paymentLogo from "../../../public/images/footer-img/payment-logo.webp";
 
 const Footer = () => {
   const features = [
@@ -140,6 +141,8 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-white">
+        <FooterStore />
+        
         <div className="hidden lg:block relative mx-auto max-w-screen-2xl py-6 px-3 sm:px-10">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 mx-auto">
             {features.map((feature, idx) => (
@@ -255,7 +258,7 @@ const Footer = () => {
                   Call Us Today!
                 </p>
                 <h5 className="text-2xl font-bold text-emerald-500 leading-7">
-                  +6599887766
+                  <a href="tel:7854215478">+91 7854215478</a>
                 </h5>
               </div>
             </div>
@@ -265,10 +268,8 @@ const Footer = () => {
                 <li className="px-1 mb-2 md:mb-0 transition hover:opacity-80 inline-flex">
                   <Image
                     alt="payment method"
-                    loading="lazy"
                     width="274"
                     height="85"
-                    decoding="async"
                     className="w-full"
                     src={paymentLogo}
                   />
@@ -281,14 +282,9 @@ const Footer = () => {
         <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">
           <p className="text-sm text-gray-500 leading-6">
             Copyright 2024 @{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-500"
-              href="https://themeforest.net/user/htmllover"
-            >
-              HtmlLover
-            </a>
+            <Link className="text-emerald-500" href="/">
+              Asvayuk Ecommerce
+            </Link>
             , All rights reserved.
           </p>
         </div>

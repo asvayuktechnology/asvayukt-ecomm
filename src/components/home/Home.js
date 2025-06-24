@@ -4,7 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import FeaturedCategories from "./FeaturedCategories";
 import ProductCard from "../productsInfo/ProductCard";
+import deliveryBoy from "../../../public/images/delivery-boy.png";
+import couponCode from "../../../public/images/ins1.jpg";
 import BannerCarousel from "../ui/common/carousel/BannerCarousel";
+import ProductModalCard from "../productsInfo/ProductModalCard";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -40,12 +43,12 @@ const Home = () => {
                   <div className="coupon coupon-home mx-4 my-5 block md:flex lg:flex md:justify-between lg:justify-between items-center bg-white rounded-md shadow">
                     <div className="tengah py-2 px-3 flex items-center justify-items-start">
                       <figure>
-                        <img
+                        <Image
                           alt="August Gift Voucher"
                           width={100}
                           height={100}
                           className="rounded-lg"
-                          src="https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FPDLPDHc%2Fins1.jpg&w=128&q=75"
+                          src={couponCode}
                         />
                       </figure>
                       <div className="ml-3">
@@ -104,12 +107,12 @@ const Home = () => {
                   <div className="coupon coupon-home mx-4 my-5 block md:flex lg:flex md:justify-between lg:justify-between items-center bg-white rounded-md shadow">
                     <div className="tengah py-2 px-3 flex items-center justify-items-start">
                       <figure>
-                        <img
+                        <Image
                           alt="Summer Gift Voucher"
                           width={100}
                           height={100}
                           className="rounded-lg"
-                          src="https://kachabazar-store-nine.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FPDLPDHc%2Fins1.jpg&w=128&q=75"
+                          src={couponCode}
                         />
                       </figure>
                       <div className="ml-3">
@@ -192,6 +195,10 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="py-5 mx-auto max-w-screen-2xl">
+          <ProductModalCard />
+        </div>
+
         <FeaturedCategories />
 
         <div className="bg-gray-50">
@@ -255,8 +262,8 @@ const Home = () => {
 
                   {/* Image Section */}
                   <div className="w-1/5 flex-grow hidden md:flex lg:justify-end">
-                    <img
-                      src="https://res.cloudinary.com/ahossain/image/upload/v1697688032/settings/delivery-boy_rluuoq.webp"
+                    <Image
+                      src={deliveryBoy}
                       alt="Quick Delivery to Your Home"
                       width={373}
                       height={250}
@@ -283,6 +290,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
+
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
@@ -295,77 +303,6 @@ const Home = () => {
                       imageUrl={items.image || "/fallback.jpg"}
                     />
                   ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full">
-          <div
-            id="downloadApp"
-            className="bg-indigo-50 py-10 lg:py-16 bg-repeat bg-center overflow-hidden"
-          >
-            <div className="max-w-screen-2xl mx-auto px-4 sm:px-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-center">
-                <div className="hidden md:flex lg:justify-start">
-                  <Image
-                    src="https://res.cloudinary.com/ahossain/image/upload/v1697688091/settings/app-download-img-left_s5n2zf.webp"
-                    alt="app download"
-                    width={500}
-                    height={394}
-                    className="w-auto"
-                    priority
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold  mb-3 text-black">
-                    Get Your Daily Needs From Our KachaBazar Store
-                  </h3>
-                  <p className="text-base opacity-90 leading-7 text-black">
-                    There are many products you will find in our shop. Choose
-                    your daily necessary product from our KachaBazar shop and
-                    get some special offers.
-                  </p>
-                  <div className="mt-8 flex justify-center">
-                    <Link
-                      href="https://www.apple.com/app-store/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mx-2"
-                    >
-                      <Image
-                        src="https://res.cloudinary.com/ahossain/image/upload/v1697688165/settings/app-store_cyyc0f.svg"
-                        alt="app store"
-                        className="h-auto"
-                        width="350"
-                        height="350"
-                      />
-                    </Link>
-                    <Link
-                      href="https://play.google.com/store/games"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Image
-                        src="https://res.cloudinary.com/ahossain/image/upload/v1697688167/settings/play-store_cavwua.svg"
-                        alt="play store"
-                        className="h-auto"
-                        width="350"
-                        height="350"
-                      />
-                    </Link>
-                  </div>
-                </div>
-                <div className="hidden md:flex lg:justify-end">
-                  <Image
-                    src="https://res.cloudinary.com/ahossain/image/upload/v1697688091/settings/app-download-img_c7xqg4.webp"
-                    alt="app download"
-                    width={500}
-                    height={394}
-                    className="w-auto"
-                    priority
-                  />
                 </div>
               </div>
             </div>
