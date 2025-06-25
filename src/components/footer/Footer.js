@@ -161,7 +161,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="hr-line" />
+        <hr className="hr-line border-slate-200" />
 
         <div className="border-t border-gray-100 w-full">
           <div className="pb-16 lg:pb-0 xl:pb-0 bg-white">
@@ -214,7 +214,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="hr-line" />
+        {/* <hr className="hr-line border-slate-200" /> */}
 
         <div className="mx-auto max-w-screen-2xl px-4 sm:px-10 bg-gray-50 border border-gray-50 rounded-lg">
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-5 sm:gap-9 lg:gap-11 xl:gap-7 py-8 items-center justify-between">

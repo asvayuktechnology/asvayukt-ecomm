@@ -1,15 +1,23 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import Loginform from '@/components/forms/loginform/Loginform'
-import Registerfrom from '@/components/forms/registerform/page';
+import Registerfrom from '@/components/forms/registerform/Registerfrom';
 import React from 'react'
 import Link from "next/link";
+import Recoverpassword from '@/components/forms/forgotpassword/Recoverpassword';
 
 const Authlayout = () => {
-        const pathname = usePathname();
+    const pathname = usePathname();
 
-    // Determine if current route is "login" or "register"
-    const currentPage = pathname.includes('/register') ? 'register' : 'login';
+    // Determine which page to render
+    let currentPage = 'login';
+    if (pathname.includes('/register')) {
+        currentPage = 'register';
+    } else if (pathname.includes('/forgotpassword')) {
+        currentPage = 'forgotpassword';
+        alert(currentPage)
+    }
+
     return (
         <>
             <div className="bg-gray-50">
@@ -20,22 +28,33 @@ const Authlayout = () => {
                                 <div className="overflow-hidden mx-auto">
                                     <div className="text-center mb-6">
                                         <h2 className="text-3xl font-bold text-black">
-                                            {currentPage == 'register' ? "Register" :  "Login"}</h2>
+                                            {{
+                                                login: 'Login',
+                                                register: 'Register',
+                                                forgotpassword: 'Forgot Password'
+                                            }[currentPage]}
+                                        </h2>
                                         <p className="text-sm md:text-base text-gray-500 mt-2 mb-8 sm:mb-10">
-                                         {currentPage == 'register' ? "Create an account by sign up with provider or email, password" :  " Login with your email and password"}  
+                                            {{
+                                                login: 'Login with your email and password',
+                                                register: 'Create an account by signing up with provider or email/password',
+                                                forgotpassword: 'Enter your email to reset your password'
+                                            }[currentPage]}
                                         </p>
                                     </div>
-                                    {currentPage == 'register' ? <Registerfrom/> :  <Loginform/>}
-                                    
+                                    {{
+                                        login: <Loginform />,
+                                        register: <Registerfrom />,
+                                        forgotpassword: <Recoverpassword />
+                                    }[currentPage]}
+
                                     <div className="my-4 text-center font-medium">
                                         <div className="after:bg-gray-100 before:bg-gray-100 text-black">OR</div>
                                     </div>
                                     <div className="flex flex-col mb-4">
                                         <button
-                                            className="
-    text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center rounded-md focus:outline-none shadow-sm
-    px-3 py-4 h-12 w-full mb-6 mr-2
-  bg-green-600 text-white hover:bg-green-700"
+                                            className="text-sm inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center rounded-md focus:outline-none shadow-sm
+                                            px-3 py-4 h-12 w-full mb-6 mr-2  bg-green-600 text-white hover:bg-green-700"
                                         >
                                             <svg
                                                 stroke="currentColor"
