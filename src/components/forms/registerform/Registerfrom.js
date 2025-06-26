@@ -103,9 +103,9 @@ const Registerfrom = () => {
                         <div className="flex ms-auto">
                             <a
                                 className="text-black text-end text-sm text-heading ps-3 underline hover:no-underline focus:outline-none"
-                                href="/auth/forget-password"
+                                href="/login"
                             >
-                                Forgot password?
+                                Already have account?
                             </a>
                         </div>
                     </div>

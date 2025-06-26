@@ -150,8 +150,8 @@ const Header = () => {
             >
               <div className="relative w-32 h-10">
                 {/* <img alt="logo" fetchpriority="high" width="0" height="0" decoding="async" data-nimg="1" className="w-full h-auto" src="/logo/logo-light.svg" style="color: transparent;" /> */}
-                <div className="flex flex-col gap-0 ">
-                  <span className="font-bold text-xl mb-0 leading-6">
+                <div className="flex flex-col gap-0 text-white">
+                  <span className="font-bold text-xl mb-0 leading-4.5">
                     Asvayuk
                   </span>
                   <span className="font-bold text-xl mb-0 leading-6">
@@ -265,7 +265,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block xl:block bg-white border-b">
+        <div className="hidden lg:block xl:block bg-white border-b border-slate-200">
           <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 h-12 flex justify-between items-center">
             <div className="inline-flex">
               <div className="relative" data-headlessui-state="">
