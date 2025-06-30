@@ -11,6 +11,8 @@ import ProductModalCard from "../productsInfo/ProductModalCard";
 
 const Home = () => {
   const [data, setData] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const api = `https://fakestoreapi.com/products`;
@@ -22,6 +24,11 @@ const Home = () => {
       console.log(error);
     }
   }, []);
+
+  const openProductModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -199,7 +206,11 @@ const Home = () => {
           <ProductModalCard />
         </div>
 
-        <FeaturedCategories />
+        <ProductModalCard
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          product={selectedProduct}
+        />
 
         <div className="bg-gray-50">
           <div className=" lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
@@ -218,13 +229,14 @@ const Home = () => {
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
-                  {data.map((items) => (
+                  {data.map((item) => (
                     <ProductCard
-                      key={items.id}
-                      title={items.title}
-                      price={items.price}
-                      stock={items.rating.count}
-                      imageUrl={items.image || "/fallback.jpg"}
+                      key={item.id}
+                      title={item.title}
+                      price={item.price}
+                      stock={item.rating.count}
+                      imageUrl={item.image}
+                      onClick={() => openProductModal(item)}
                     />
                   ))}
                 </div>
@@ -294,13 +306,14 @@ const Home = () => {
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
-                  {data.map((items) => (
+                  {data.map((item) => (
                     <ProductCard
-                      key={items.id}
-                      title={items.title}
-                      price={items.price}
-                      stock={items.rating.count}
-                      imageUrl={items.image || "/fallback.jpg"}
+                      key={item.id}
+                      title={item.title}
+                      price={item.price}
+                      stock={item.rating.count}
+                      imageUrl={item.image}
+                      onClick={() => openProductModal(item)}
                     />
                   ))}
                 </div>

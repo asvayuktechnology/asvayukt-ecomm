@@ -217,7 +217,7 @@ const socialButtons = [
   },
 ];
 
-const Product = () => {
+const ProductDetail = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -382,31 +382,36 @@ const Product = () => {
                   </p>
                   {/* Social Icons Placeholder */}
                   <ul className="flex mt-4">
-      {socialButtons.map((item, index) => (
-        <li
-          key={index}
-          className="flex items-center text-center border border-gray-100 rounded-full hover:bg-emerald-500 mr-2 transition ease-in-out duration-500"
-        >
-          <button
-            className="react-share__ShareButton"
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              padding: 0,
-              font: "inherit",
-              color: "inherit",
-              cursor: "pointer",
-            }}
-            aria-label={`Share on ${item.name}`}
-          >
-            <svg viewBox="0 0 64 64" width="32" height="32">
-              <circle cx="32" cy="32" r="32" fill={item.bg}></circle>
-              {item.svgPath}
-            </svg>
-          </button>
-        </li>
-      ))}
-    </ul>
+                    {socialButtons.map((item, index) => (
+                      <li
+                        key={index}
+                        className="flex items-center text-center border border-gray-100 rounded-full hover:bg-emerald-500 mr-2 transition ease-in-out duration-500"
+                      >
+                        <button
+                          className="react-share__ShareButton"
+                          style={{
+                            backgroundColor: "transparent",
+                            border: "none",
+                            padding: 0,
+                            font: "inherit",
+                            color: "inherit",
+                            cursor: "pointer",
+                          }}
+                          aria-label={`Share on ${item.name}`}
+                        >
+                          <svg viewBox="0 0 64 64" width="32" height="32">
+                            <circle
+                              cx="32"
+                              cy="32"
+                              r="32"
+                              fill={item.bg}
+                            ></circle>
+                            {item.svgPath}
+                          </svg>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <div className="w-full xl:w-5/12 lg:w-6/12 md:w-5/12">
@@ -453,4 +458,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductDetail;

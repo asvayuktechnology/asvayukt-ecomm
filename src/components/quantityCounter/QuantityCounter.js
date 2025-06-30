@@ -18,7 +18,7 @@ const QuantityCounter = () => {
       {/* Decrease Button */}
       <button
         onClick={handleDecrease}
-        className="flex items-center justify-center h-full flex-shrink-0 transition ease-in-out duration-300 focus:outline-none w-12 text-heading border-e border-gray-300 hover:text-gray-500 text-black"
+        className="flex items-center justify-center h-full flex-shrink-0 transition ease-in-out duration-300 focus:outline-none w-12 text-heading border-e border-gray-300 hover:text-gray-500 text-black cursore-pointer"
         aria-label="Decrease quantity"
         disabled={quantity <= 1}
       >
@@ -39,14 +39,14 @@ const QuantityCounter = () => {
       </button>
 
       {/* Quantity Display */}
-      <p className="font-semibold flex items-center justify-center transition-colors duration-250 ease-in-out cursor-default flex-shrink-0 text-base text-heading w-10 md:w-20 xl:w-24 text-black">
+      <p className="font-semibold flex items-center justify-center transition-colors duration-250 ease-in-out cursor-default flex-shrink-0 text-base text-heading w-10 md:w-20 xl:w-24 text-black cursor-pointer">
         {quantity}
       </p>
 
       {/* Increase Button */}
       <button
         onClick={handleIncrease}
-        className="flex items-center justify-center h-full flex-shrink-0 transition ease-in-out duration-300 focus:outline-none w-10 md:w-12 text-heading border-s border-gray-300 hover:text-gray-500 text-black"
+        className="flex items-center justify-center h-full flex-shrink-0 transition ease-in-out duration-300 focus:outline-none w-10 md:w-12 text-heading border-s border-gray-300 hover:text-gray-500 text-black cursore-pointer"
         aria-label="Increase quantity"
       >
         <span className="text-dark sm:text-2xl">
