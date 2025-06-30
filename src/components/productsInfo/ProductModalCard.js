@@ -4,13 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Modal, ModalBody } from "flowbite-react";
+import QuantityCounter from "../quantityCounter/QuantityCounter";
 
 const ProductModalCard = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [quantity, setQuantity] = useState(1);
-
-  const handleIncrement = () => setQuantity((q) => q + 1);
-  const handleDecrement = () => setQuantity((q) => (q > 1 ? q - 1 : 1));
 
   return (
     <>
@@ -23,152 +20,105 @@ const ProductModalCard = () => {
         size="5xl"
       >
         <ModalBody className="p-0">
-          <div className="flex flex-col lg:flex-row w-full bg-white rounded-2xl overflow-hidden">
-            <Link
-              href="/product/premium-t-shirt"
-              className="flex items-center justify-center bg-white"
-            >
-              <Image
-                alt="product"
-                width={420}
-                height={420}
-                src="https://res.cloudinary.com/ahossain/image/upload/v1738768427/product/CMTHP-COR12-black-920x920-removebg-preview.png"
-                className="object-contain"
-              />
-            </Link>
-
-            <div className="w-full p-5 md:p-8 text-left">
-              <div className="mb-2 -mt-1.5">
-                <Link href="/product/premium-t-shirt">
-                  <h1 className="text-heading text-lg md:text-xl lg:text-2xl font-semibold font-serif text-black cursor-pointer">
-                    Premium T-Shirt
+          <div className="w-full rounded-lg p-3 lg:p-12 bg-white">
+            <div className="flex flex-col md:flex-row">
+              <div className="flex-shrink-0 xl:pr-10 lg:block w-full mx-auto md:w-6/12 lg:w-5/12 xl:w-4/12 relative">
+                <span className="absolute text-sm bg-orange-500 text-white py-1 px-2 rounded font-medium z-10 left-0 top-4">
+                  8.56% Off
+                </span>
+                <Image
+                  alt="product"
+                  width={650}
+                  height={650}
+                  priority
+                  src="https://res.cloudinary.com/ahossain/image/upload/v1738768685/product/Himalaya-Baby-Powder-100g-removebg-preview.png"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="md:w-2/3 w-full md:pr-6">
+                <div className="mb-6">
+                  <h1 className="leading-7 text-lg md:text-xl lg:text-2xl mb-1 font-semibold font-serif text-gray-800">
+                    Himalaya Powder
                   </h1>
-                </Link>
-                <div className="mt-2">
-                  <span className="bg-green-100 text-green-500 rounded-full inline-flex items-center px-2 py-0 text-xs font-semibold font-serif">
-                    Stock:
-                    <span className="text-orange-700 pl-1 font-bold">550</span>
-                  </span>
-                </div>
-              </div>
-
-              <p className="text-sm leading-6 text-gray-500">
-                A T-shirt (also spelled tee-shirt or tee shirt), or tee for
-                short, is a style of fabric shirt named after the T shape of its
-                body and sleeves. Traditionally, it has short sleeves and a
-                round neckline, known as a crew neck, which lacks a collar.
-              </p>
-
-              <div className="my-4 font-serif font-bold text-2xl text-black">
-                $450.00
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-serif text-gray-700 font-bold">
-                  Color:
-                </h4>
-                <select className="w-3/4 px-2 py-1 bg-gray-100 rounded-md h-10 text-sm my-2 text-black">
-                  <option hidden value="red">
-                    Red
-                  </option>
-                  <option value="red">Red</option>
-                  <option value="green">Green</option>
-                  <option value="blue">Blue</option>
-                </select>
-
-                <h4 className="text-sm font-serif text-gray-700 font-bold mt-2">
-                  Size:
-                </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mt-2">
-                  {["Small", "Medium", "Large"].map((size, idx) => (
-                    <button
-                      key={idx}
-                      className={`${
-                        size === "Small"
-                          ? "bg-emerald-500 text-white"
-                          : "bg-gray-100 text-gray-600"
-                      } rounded-full px-3 py-1 text-xs font-serif`}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 mt-4">
-                <div className="flex items-center border rounded-md overflow-hidden h-12 border-gray-900 text-black">
-                  <button
-                    onClick={handleDecrement}
-                    className="w-8 md:w-12 border-e border-gray-900 hover:text-gray-500"
-                  >
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                  </button>
-                  <p className="w-8 md:w-20 text-base text-center">
-                    {quantity}
+                  <p className="uppercase font-serif font-medium text-gray-500 text-sm">
+                    SKU : <span className="font-bold text-gray-600"></span>
                   </p>
-                  <button
-                    onClick={handleIncrement}
-                    className="w-8 md:w-12 border-s border-gray-900 hover:text-gray-500"
-                  >
-                    <svg
-                      stroke="currentColor"
-                      fill="none"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <line x1="12" y1="5" x2="12" y2="19" />
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                    </svg>
-                  </button>
-                </div>
-
-                <button className="text-sm font-semibold font-serif text-white bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-md w-full h-12">
-                  Add to Cart
-                </button>
-              </div>
-
-              <div className="flex flex-col sm:flex-row justify-between mt-4 gap-3">
-                <div>
-                  <p className="font-serif font-semibold text-sm">
-                    <span className="text-gray-700">Category:</span>
-                    <Link href="/search?category=men&_id=632ab2b64d87ff2494210aa7">
-                      <button className="text-gray-600 font-serif font-medium underline ml-2 hover:text-teal-600">
-                        men
-                      </button>
-                    </Link>
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {["premium-shirt", "t-shirt", "new-t-shirt"].map(
-                      (tag, idx) => (
-                        <span
-                          key={idx}
-                          className="bg-gray-50 text-gray-600 rounded-full px-3 py-1 text-xs font-semibold font-serif"
-                        >
-                          {tag}
-                        </span>
-                      )
-                    )}
+                  <div className="relative">
+                    <span className="bg-green-100 text-green-500 rounded-full inline-flex items-center justify-center px-2 py-0 text-xs font-semibold font-serif">
+                      Stock :
+                      <span className="text-orange-700 pl-1 font-bold">
+                        5472
+                      </span>
+                    </span>
                   </div>
                 </div>
 
-                <button className="font-sans font-medium text-sm text-orange-500 mt-2 sm:mt-0">
-                  More Info
-                </button>
-              </div>
+                <div className="font-serif font-bold text-2xl text-black">
+                  $160.00{" "}
+                  <del className="text-lg font-normal text-gray-400 ml-1">
+                    $174.97
+                  </del>
+                </div>
 
-              <p className="text-xs sm:text-sm text-gray-600 mt-4 text-right">
-                Call Us To Order By Mobile Number:{" "}
-                <span className="text-emerald-700 font-semibold">
-                  +0044235234
-                </span>
-              </p>
+                <div className="text-sm leading-6 text-gray-500 md:leading-7 mt-4">
+                  Baby Products are products intended to be used on infants and
+                  category under the age of three. Baby products are specially
+                  formulated to be mild and non-irritating and use ingredients
+                  that are selected for these properties. Baby products include
+                  baby shampoos and baby lotions, oils, powders and creams.
+                  <br />
+                  <span className="read-or-hide">Show Less</span>
+                </div>
+
+                {/* Quantity & Add to Cart */}
+                <div className="flex items-center mt-4">
+                  <div className="flex items-center justify-between w-full space-x-3 sm:space-x-4">
+                    <QuantityCounter />
+                    <button className="bg-gray-800 text-white text-sm leading-4 font-semibold px-4 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 w-full h-12 rounded-md hover:bg-gray-900">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-col mt-4">
+                  <span className="font-serif font-semibold py-1 text-sm">
+                    <span className="text-gray-800">Category:</span>
+                    <Link href="/search?category=skin-care&_id=632ab2f04d87ff2494210ad0">
+                      <button className="text-gray-600 font-serif font-medium underline ml-2 hover:text-teal-600">
+                        skin-care
+                      </button>
+                    </Link>
+                  </span>
+                  <div className="flex flex-row">
+                    <span className="bg-gray-50 mr-2 text-gray-600 rounded-full px-3 py-1 text-xs font-semibold font-serif mt-2">
+                      baby care
+                    </span>
+                    <span className="bg-gray-50 mr-2 text-gray-600 rounded-full px-3 py-1 text-xs font-semibold font-serif mt-2">
+                      baby accessories
+                    </span>
+                  </div>
+                </div>
+
+                {/* Contact */}
+                <div className="mt-8 text-xs sm:text-sm text-gray-700 font-medium flex justify-between">
+                  <div>
+                    Call Us To Order By Mobile Number :
+                    <span className="text-emerald-700 font-semibold">
+                      {" "}
+                      +0044235234
+                    </span>
+                  </div>
+                  <div>
+                    <Link
+                      href="/single-product"
+                      className="text-orange-400 font-bold"
+                    >
+                      More Info
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </ModalBody>

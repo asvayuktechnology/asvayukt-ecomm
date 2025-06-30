@@ -102,3 +102,8 @@ body {
     border: 1px solid #10b981;
     color: #fff
 }
+
+/* Home 2 Page */
+.testimonialSection{
+  background: linear-gradient(121deg,rgba(248,237,236,1),rgba(239,249,246,1) 50.719%,rgba(248,237,236,1) 95%);
+}
