@@ -1,18 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Search from "../ui/common/inputs/Search";
 import DropdownMenus from "./DropdownMenus";
-import cabbage from "../../../public/images/cabbage_n59uv3.png"
-import fryingPan from "../../../public/images/frying-pan_vglm5c.png"
-import spray_pebsjt from "../../../public/images/spray_pebsjt.png"
-import cat_tznwmq from "../../../public/images/cat_tznwmq.png"
-import beauty_vfbmzc from "../../../public/images/beauty_vfbmzc.png"
-import strawberryjam from "../../../public/images/strawberry-jam-1.png"
-import milk_dcl0dr from "../../../public/images/milk_dcl0dr.png"
-import juice_p5gv5k from "../../../public/images/juice_p5gv5k.png"
-import bagel_mt3fod from "../../../public/images/bagel_mt3fod.png"
+import cabbage from "../../../public/images/cabbage_n59uv3.png";
+import fryingPan from "../../../public/images/frying-pan_vglm5c.png";
+import spray_pebsjt from "../../../public/images/spray_pebsjt.png";
+import cat_tznwmq from "../../../public/images/cat_tznwmq.png";
+import beauty_vfbmzc from "../../../public/images/beauty_vfbmzc.png";
+import strawberryjam from "../../../public/images/strawberry-jam-1.png";
+import milk_dcl0dr from "../../../public/images/milk_dcl0dr.png";
+import juice_p5gv5k from "../../../public/images/juice_p5gv5k.png";
+import bagel_mt3fod from "../../../public/images/bagel_mt3fod.png";
+import Cart from "../cart/Cart";
 
 const Header = () => {
+  const [isCartOpen, setCartOpen] = useState(false);
   const categories = [
     {
       title: "Fruits & Vegetable",
@@ -228,7 +231,8 @@ const Header = () => {
               </button>
               <button
                 aria-label="Total"
-                className="relative px-5 text-white text-2xl font-bold"
+                className="relative px-5 text-white text-2xl font-bold cursor-pointer"
+                onClick={() => setCartOpen(true)}
               >
                 <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
                   0
@@ -254,10 +258,7 @@ const Header = () => {
                 className="pl-5 text-white text-2xl font-bold"
                 aria-label="Login"
               >
-                <Link
-                  className="leading-none font-bold  block"
-                  href="/login"
-                >
+                <Link className="leading-none font-bold  block" href="/login">
                   J
                 </Link>
               </button>
@@ -272,10 +273,7 @@ const Header = () => {
                 <div className="max-w-7xl mx-auto">
                   <div className="flex justify-between items-center md:justify-start md:space-x-10">
                     <nav className="md:flex space-x-10 items-center">
-                      <div
-                        className="relative "
-                        data-headlessui-state=""
-                      >
+                      <div className="relative " data-headlessui-state="">
                         <DropdownMenus
                           categories={categories}
                           menuTitle="Categories"
@@ -327,6 +325,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Cart Drawer */}
+      <Cart isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
     </>
   );
 };
