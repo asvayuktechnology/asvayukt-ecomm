@@ -1,12 +1,24 @@
 "use client";
 
 import { Modal, ModalBody } from "flowbite-react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/store/slice/cartSlice";
 import QuantityCounter from "../quantityCounter/QuantityCounter";
 
 const ProductModalCard = ({ isOpen, onClose, product }) => {
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
   if (!product) return null;
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ ...product, quantity }));
+    setQuantity(1);
+    onClose();
+  };
 
   return (
     <Modal show={isOpen} onClose={onClose} dismissible size="5xl">
@@ -14,14 +26,10 @@ const ProductModalCard = ({ isOpen, onClose, product }) => {
         <div className="w-full rounded-lg p-3 lg:p-12 bg-white">
           <div className="flex flex-col md:flex-row">
             <div className="flex-shrink-0 xl:pr-10 lg:block w-full mx-auto md:w-6/12 lg:w-5/12 xl:w-4/12 relative">
-              {/* <span className="absolute text-sm bg-orange-500 text-white py-1 px-2 rounded font-medium z-10 left-0 top-4">
-                8.56% Off
-              </span> */}
               <img
                 alt={product.title}
                 width={650}
                 height={650}
-                priority
                 src={product.image}
                 className="w-full h-auto"
               />
@@ -60,8 +68,14 @@ const ProductModalCard = ({ isOpen, onClose, product }) => {
               {/* Quantity & Add to Cart */}
               <div className="flex items-center mt-4">
                 <div className="flex items-center justify-between w-full space-x-3 sm:space-x-4">
-                  <QuantityCounter />
-                  <button className="bg-gray-800 text-white text-sm leading-4 font-semibold px-4 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 w-full h-12 rounded-md hover:bg-gray-900 cursor-pointer">
+                  <QuantityCounter
+                    quantity={quantity}
+                    setQuantity={setQuantity}
+                  />
+                  <button
+                    onClick={handleAddToCart}
+                    className="bg-gray-800 text-white text-sm leading-4 font-semibold px-4 md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 w-full h-12 rounded-md hover:bg-gray-900 cursor-pointer"
+                  >
                     Add to Cart
                   </button>
                 </div>

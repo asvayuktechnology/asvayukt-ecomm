@@ -13,9 +13,13 @@ import milk_dcl0dr from "../../../public/images/milk_dcl0dr.png";
 import juice_p5gv5k from "../../../public/images/juice_p5gv5k.png";
 import bagel_mt3fod from "../../../public/images/bagel_mt3fod.png";
 import Cart from "../cart/Cart";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
   const [isCartOpen, setCartOpen] = useState(false);
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
+
   const categories = [
     {
       title: "Fruits & Vegetable",
@@ -235,7 +239,7 @@ const Header = () => {
                 onClick={() => setCartOpen(true)}
               >
                 <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
-                  0
+                  {cartItems.length ? cartItems.length : 0}
                 </span>
                 <svg
                   stroke="currentColor"
