@@ -128,7 +128,7 @@ export default function Cart({ isOpen, onClose }) {
             <button className="w-full py-3 px-3 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-medium flex justify-between items-center">
               <span>Proceed To Checkout</span>
               <span className="bg-white text-emerald-600 px-3 py-2 rounded-lg font-bold">
-                ₹{cartTotal.toFixed(2)}
+                ${cartTotal.toFixed(2)}
               </span>
             </button>
           </div>
