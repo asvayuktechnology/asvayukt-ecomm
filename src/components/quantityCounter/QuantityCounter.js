@@ -1,7 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
-const QuantityCounter = ({ quantity, setQuantity }) => {
+const QuantityCounter = () => {
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <div className="group flex items-center justify-between rounded-md overflow-hidden flex-shrink-0 border h-12 border-gray-300">
       {/* Decrease Button */}

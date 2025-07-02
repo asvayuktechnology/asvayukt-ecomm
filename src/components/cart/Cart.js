@@ -4,6 +4,7 @@ import { Drawer, DrawerHeader, DrawerItems } from "flowbite-react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "@/store/slice/cartSlice";
 import Image from "next/image";
+import QuantityCounter from "../quantityCounter/QuantityCounter";
 
 export default function Cart({ isOpen, onClose }) {
   const dispatch = useDispatch();
@@ -21,14 +22,14 @@ export default function Cart({ isOpen, onClose }) {
       open={isOpen}
       onClose={onClose}
       position="right"
-      className="!w-[450px] px-0 py-0"
+      className="lg:w-[450px] md:w-[350px] w-[100%] px-0 py-0"
     >
       <DrawerHeader
         title="Shopping Cart"
         className="px-3 bg-white pt-4 text-black"
       />
       <DrawerItems>
-        <div className="flex flex-col h-screen justify-between bg-white">
+        <div className="flex flex-col h-[95vh] justify-between bg-white">
           <div className="flex-grow px-5 py-6 overflow-y-auto">
             {cartItems.length === 0 ? (
               <div className="flex flex-col justify-center items-center text-center mt-10">
@@ -57,39 +58,65 @@ export default function Cart({ isOpen, onClose }) {
                 {cartItems.map((item) => (
                   <li
                     key={item.id}
-                    className="py-4 flex items-center justify-between space-x-3"
+                    className="group w-full h-auto flex justify-start items-center bg-white py-3 px-4 border-b hover:bg-gray-50 transition-all border-gray-100 relative last:border-b-0"
                   >
                     {/* Product Image */}
-                    <div className="w-16 h-16 flex-shrink-0 relative">
+                    <div className="relative flex rounded-full border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 cursor-pointer mr-4">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="object-contain rounded"
+                        width={40}
+                        height={40}
+                        className="object-contain transition duration-150 ease-linear transform group-hover:scale-105 p-2"
+                        style={{ objectFit: "contain" }}
                       />
                     </div>
 
                     {/* Product Info */}
-                    <div className="flex-1 pr-3">
-                      <h4 className="text-sm font-medium text-gray-800">
-                        {item.title}
-                      </h4>
-                      <p className="text-xs text-gray-500">
-                        Qty: {item.quantity} × ₹{item.price}
-                      </p>
-                    </div>
-
-                    {/* Price + Remove */}
-                    <div className="flex items-center space-x-2">
-                      <span className="text-sm font-semibold text-gray-800">
-                        ₹{(item.price * item.quantity).toFixed(2)}
-                      </span>
-                      <button
-                        onClick={() => handleRemove(item.id)}
-                        className="text-red-500 hover:text-red-700"
-                        title="Remove item"
+                    <div className="flex flex-col w-full overflow-hidden">
+                      <a
+                        className="truncate text-sm font-medium text-gray-700 text-heading line-clamp-1"
+                        href={`/product/${item.id}`}
                       >
-                        ✕
-                      </button>
+                        {item.title}
+                      </a>
+                      <span className="text-xs text-gray-400 mb-1">
+                        Item Price ${item.price}
+                      </span>
+
+                      {/* Bottom row: total price, quantity counter, remove */}
+                      <div className="flex items-center justify-between">
+                        <div className="font-bold text-sm md:text-base text-heading leading-5">
+                          ${(item.price * item.quantity).toFixed(2)}
+                        </div>
+
+                        {/* Quantity Counter */}
+                        <QuantityCounter />
+
+                        {/* Remove Button */}
+                        <button
+                          className="hover:text-red-600 text-red-400 text-lg cursor-pointer"
+                          onClick={() => handleRemove(item.id)}
+                          title="Remove"
+                        >
+                          <svg
+                            stroke="currentColor"
+                            fill="none"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <polyline points="3 6 5 6 21 6" />
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            <line x1="10" y1="11" x2="10" y2="17" />
+                            <line x1="14" y1="11" x2="14" y2="17" />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </li>
                 ))}

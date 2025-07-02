@@ -247,7 +247,7 @@ const Home = () => {
 
         <div className="block mx-auto max-w-screen-2xl">
           <div className="mx-auto max-w-screen-2xl px-4 sm:px-10">
-            <div className="lg:p-16 p-6 bg-emerald-500 shadow-sm border rounded-lg">
+            <div className="lg:p-16 p-6 bg-emerald-500 shadow-sm rounded-lg">
               <div className="w-full bg-white shadow-sm lg:px-10 lg:py-5 p-6 rounded-lg">
                 <div className="flex justify-between items-center">
                   {/* Text Section */}
