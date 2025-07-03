@@ -34,11 +34,11 @@ const Home = () => {
     <>
       <section className="bannerwrapper bg-white">
         <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
-          <div className="w-full hidden lg:flex">
+          <div className="w-full lg:flex">
             <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5 rounded-lg overflow-hidden">
               <BannerCarousel />
             </div>
-            <div className="w-full group">
+            <div className="w-full group hidden lg:block">
               <div className="bg-gray-50 h-full border-2 border-orange-500 transition duration-150 ease-linear transform group-hover:border-emerald-500 rounded shadow">
                 <div className="bg-orange-100 text-gray-900 px-6 py-2 rounded-t border-b flex items-center justify-center">
                   <h3 className="text-base  font-medium">
@@ -180,8 +180,8 @@ const Home = () => {
           </div>
 
           <div className="bg-orange-100 px-10 py-6 rounded-lg mt-6">
-            <div className="flex justify-between items-center">
-              <div>
+            <div className="lg:flex lg:justify-between lg:items-center">
+              <div className="mb-4 lg:mb-0">
                 <h1 className=" text-xl">
                   <span className="text-emerald-600 font-bold">
                     100% Natural Quality Organic Product
@@ -192,12 +192,12 @@ const Home = () => {
                   discount product
                 </p>
               </div>
-              <a
-                className="text-sm  font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700"
-                href="/search?category=breakfast"
+              <Link
+                className="text-sm font-medium px-6 py-2 bg-emerald-500 text-center rounded-full text-white hover:bg-emerald-700"
+                href="/products"
               >
                 Shop Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

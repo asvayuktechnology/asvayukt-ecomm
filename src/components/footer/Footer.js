@@ -7,9 +7,11 @@ import paymentLogo from "../../../public/images/footer-img/payment-logo.webp";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import Cart from "../cart/Cart";
+import CategoryDrawer from "../categoryDrawer/CategoryDrawer";
 
 const Footer = () => {
   const [isCartOpen, setCartOpen] = useState(false);
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
   const cartItems = useSelector((state) => state.cart.items);
 
   const features = [
@@ -301,7 +303,8 @@ const Footer = () => {
         {/* Menu Icon Button */}
         <button
           aria-label="Bar"
-          className="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none"
+          className="flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none cursor-pointer"
+          onClick={() => setDrawerOpen(true)}
         >
           <span className="text-xl text-white">
             <svg
@@ -383,6 +386,12 @@ const Footer = () => {
 
       {/* Cart Drawer */}
       <Cart isOpen={isCartOpen} onClose={() => setCartOpen(false)} />
+
+      {/* CategoryDrawer */}
+      <CategoryDrawer
+        open={isDrawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      />
     </>
   );
 };
