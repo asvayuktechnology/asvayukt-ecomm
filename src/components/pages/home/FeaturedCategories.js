@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 const categories = [
   {
@@ -86,7 +87,7 @@ const FeaturedCategories = () => {
           {categories.map((cat, index) => (
             <li key={index} className="group">
               <div className="bg-white border border-gray-100 shadow-sm p-4 cursor-pointer transition-transform transform group-hover:shadow-lg flex items-center h-full">
-                <img
+                <Image
                   src={cat.image}
                   alt={cat.title}
                   width="35"

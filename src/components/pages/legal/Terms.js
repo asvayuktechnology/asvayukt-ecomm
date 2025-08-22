@@ -21,11 +21,11 @@ const TermsPage = () => {
           </h1>
           <p>
             These terms and conditions outline the rules and regulations for the
-            use of Asvayuk Ecommerce's Website, located at
-            <a href="/" className="text-[#00bc7d]">
+            use of Asvayuk Ecommerce&#39;s Website, located at
+            <Link href="https://asvayuktech.com/" target="_blank" className="text-[#00bc7d]">
               {" "}
               https://asvayuktech.com/
-            </a>
+            </Link>
             . By accessing this website, we assume you accept these terms and
             conditions. Do not continue to use Asvayuk Ecommerce if you do not
             agree to take all of the terms and conditions stated on this page.
@@ -33,10 +33,10 @@ const TermsPage = () => {
           <p>
             The following terminology applies to these Terms and Conditions,
             Privacy Statement and Disclaimer Notice and all Agreements:
-            "Client", "You" and "Your" refers to you, the person logging on to
-            this website and compliant with the Company’s terms. "The Company",
-            "Ourselves", "We", "Our" and "Us", refers to our Company. "Party",
-            "Parties", or "Us", refers to both the Client and ourselves. All
+            &#34Client&#34, &#34You&#34 and &#34Your&#34 refers to you, the person logging on to
+            this website and compliant with the Company’s terms. &#34The Company&#34,
+            &#34;Ourselves&#34;, &#34;We&#34;, &#34;Our&#34; and &#34;Us&#34;, refers to our Company. &#34;Party&#34;,
+            &#34;Parties&#34;, or &#34;Us&#34;, refers to both the Client and ourselves. All
             terms refer to the offer, acceptance, and consideration of payment
             necessary to undertake the process of our assistance to the Client
             in the most appropriate manner for the purpose of meeting the

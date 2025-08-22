@@ -100,7 +100,7 @@ const PrivacyPage = () => {
             <strong>Third Party Privacy Policies</strong>
           </h1>
           <p>
-            Asvayuk Ecommerce's Privacy Policy does not apply to other
+            Asvayuk Ecommerce&#39;s Privacy Policy does not apply to other
             advertisers or websites. Please consult the respective Privacy
             Policies of these third-party ad servers for more details. You can
             disable cookies through your browser settings.
@@ -117,7 +117,7 @@ const PrivacyPage = () => {
           </p>
 
           <h1 className="text-lg mt-8 mb-4">
-            <strong>Children's Information</strong>
+            <strong>Children&#39;s Information</strong>
           </h1>
           <p>
             We prioritize protecting children online. Asvayuk Ecommerce does not

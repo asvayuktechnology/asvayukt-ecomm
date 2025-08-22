@@ -20,7 +20,7 @@ export default function ProductCard({
       </div>
 
       <div className="relative flex justify-center cursor-pointer pt-2 w-full h-44">
-        <img
+        <Image
           alt={title}
           src={imageUrl}
           className="object-contain transition duration-150 ease-linear transform group-hover:scale-105 p-2 w-25"

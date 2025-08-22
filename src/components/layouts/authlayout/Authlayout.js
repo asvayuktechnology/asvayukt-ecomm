@@ -84,7 +84,7 @@ const Authlayout = () => {
                   </div>
                   <div className="text-center text-sm text-gray-900 mt-4">
                     <div className="text-gray-500 mt-2.5">
-                      Don't have an account?
+                      Don&#39;t have an account?
                       <Link
                         href="/register"
                         className="text-gray-800 hover:text-cyan-500 font-bold mx-2"

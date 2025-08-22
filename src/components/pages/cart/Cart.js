@@ -4,6 +4,7 @@ import { Drawer, DrawerHeader, DrawerItems } from "flowbite-react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "@/store/slice/cartSlice";
 import QuantityCounter from "@/components/products/quantityCounter/QuantityCounter";
+import Image from "next/image";
 
 export default function Cart({ isOpen, onClose }) {
   const dispatch = useDispatch();
@@ -61,7 +62,7 @@ export default function Cart({ isOpen, onClose }) {
                   >
                     {/* Product Image */}
                     <div className="relative flex rounded-full border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 cursor-pointer mr-4">
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.title}
                         width={40}

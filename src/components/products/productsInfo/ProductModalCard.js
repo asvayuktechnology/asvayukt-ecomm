@@ -26,7 +26,7 @@ const ProductModalCard = ({ isOpen, onClose, product }) => {
         <div className="w-full rounded-lg p-3 lg:p-12 bg-white">
           <div className="flex flex-col md:flex-row">
             <div className="flex-shrink-0 xl:pr-10 lg:block w-full mx-auto md:w-6/12 lg:w-5/12 xl:w-4/12 relative">
-              <img
+              <Image
                 alt={product.title}
                 width={650}
                 height={650}
