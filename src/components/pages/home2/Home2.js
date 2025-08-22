@@ -352,7 +352,7 @@ const Home2 = () => {
       <section className="relative w-full h-[80vh] sm:h-[85vh] md:h-[75vh] overflow-hidden">
         {/* Background Image */}
         <Image
-          src={homeBanner}
+          src={AppImages.products.topBanner}
           alt="New Collection"
           fill
           priority
