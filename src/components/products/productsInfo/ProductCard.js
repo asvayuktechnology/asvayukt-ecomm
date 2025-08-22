@@ -25,6 +25,8 @@ export default function ProductCard({
           src={imageUrl}
           className="object-contain transition duration-150 ease-linear transform group-hover:scale-105 p-2 w-25"
           sizes="100%"
+          width={300}
+          height={300}
         />
       </div>
 

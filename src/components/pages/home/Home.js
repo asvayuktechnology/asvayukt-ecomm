@@ -28,8 +28,8 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const products = await getProducts();
-        setData(products);
+        const data = await getProducts();
+        setData(data);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
