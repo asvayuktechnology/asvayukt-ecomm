@@ -28,7 +28,7 @@ body {
 }
 
 .bannerbg{
-  background: url("../../public/images/bgbanner.jpg");
+  background: url("../../public/images/banner/bgbanner.jpg");
 }
 
 .bannercarouselwrapper > div > div::-webkit-scrollbar {

@@ -1,5 +1,5 @@
 import HomeLayout from '@/components/layouts/homelayout/HomeLayout'
-import Usersidebar from '@/components/user/Usersidebar'
+import Usersidebar from '@/components/user/dashboard/Usersidebar'
 import React from 'react'
 
 const layout = ({children}) => {

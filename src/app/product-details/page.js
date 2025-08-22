@@ -1,13 +1,7 @@
-import HomeLayout from '@/components/layouts/homelayout/HomeLayout'
-import ProductDetail from '@/components/productsInfo/ProductDetail'
-import React from 'react'
+import ProductDetail from "@/components/products/productsInfo/ProductDetail";
 
 const page = () => {
-  return (
-    <HomeLayout>
-      <ProductDetail/>
-    </HomeLayout>
-  )
-}
+  return <ProductDetail />;
+};
 
-export default page
+export default page;
