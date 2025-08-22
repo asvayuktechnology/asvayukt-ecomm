@@ -112,17 +112,11 @@ const ProductModalCard = ({ isOpen, onClose, product }) => {
                 </div>
                 <div>
                   <Link
-                    href={`/product-details/`}
+                    href={`/product/${product.id}`}
                     className="text-orange-400 font-bold"
                   >
                     More Info
                   </Link>
-                  {/* <Link
-                    href={`/product-details/${product.id}`}
-                    className="text-orange-400 font-bold"
-                  >
-                    More Info
-                  </Link> */}
                 </div>
               </div>
             </div>
