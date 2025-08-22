@@ -328,6 +328,8 @@ const Home2 = () => {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-auto object-cover mb-2"
+                      height={200}
+                      width={200}
                     />
                     <p className="text-xs text-gray-600 line-through">
                       {item.oldPrice || ""}
@@ -352,7 +354,7 @@ const Home2 = () => {
       <section className="relative w-full h-[80vh] sm:h-[85vh] md:h-[75vh] overflow-hidden">
         {/* Background Image */}
         <Image
-          src={AppImages.products.topBanner}
+          src={AppImages.home2.products.topBanner}
           alt="New Collection"
           fill
           priority
@@ -438,7 +440,7 @@ const Home2 = () => {
 
       <section className="relative bg-gray-100">
         <div className="relative w-full">
-          <Image src={bottomBanner} alt="Promo" className="object-cover" />
+          <Image src={AppImages.home2.products.bottomBanner} alt="Promo" className="object-cover" fill />
           <div className="max-w-screen-xl mx-auto absolute inset-0 flex items-center justify-start px-10">
             <div>
               <h3 className="text-2xl md:text-4xl font-bold text-red-600">
