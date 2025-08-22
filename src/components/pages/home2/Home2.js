@@ -251,9 +251,9 @@ const Home2 = () => {
           </div>
 
           <div className="flex-shrink-0">
-            <a href="#" className="flex items-center gap-2">
+            <Link href="#" className="flex items-center gap-2">
               <span className="text-xl font-bold tracking-wide">Asvayuk</span>
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-4 sm:gap-6">
@@ -312,9 +312,9 @@ const Home2 = () => {
               <p className="font-semibold mb-2 text-sm">Quick Search:</p>
               <div className="flex flex-wrap gap-4 text-sm text-black">
                 {["Dress", "Top", "Shorts", "Accessories"].map((item, i) => (
-                  <a key={i} href="#" className="underline">
+                  <Link key={i} href="#" className="underline">
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -526,35 +526,35 @@ const Home2 = () => {
               <h5 className="font-semibold mb-4">Contact Us</h5>
               <p>55 Gallaxy Enque, 2568 street, 23568 NY</p>
               <p className="py-1">
-                Phone : <a href="tel:+91 7854785432">+91 7854785432</a>
+                Phone : <Link href="tel:+91 7854785432">+91 7854785432</Link>
               </p>
               <p className="py-1">
                 Email :{" "}
-                <a href="mailto: sales@yousite.com">sales@yousite.com</a>
+                <Link href="mailto: sales@yousite.com">sales@yousite.com</Link>
               </p>
               <h5 className="font-semibold mb-4 pt-4">Stay Connected</h5>
               <div className="flex space-x-4 mt-4 text-lg">
-                <a
+                <Link
                   href="#"
                   aria-label="Facebook"
                   className="hover:text-gray-300 transition"
                 >
                   <FaFacebookF />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   aria-label="Instagram"
                   className="hover:text-gray-300 transition"
                 >
                   <FaInstagram />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   aria-label="Pinterest"
                   className="hover:text-gray-300 transition"
                 >
                   <FaPinterestP />
-                </a>
+                </Link>
               </div>
             </div>
 

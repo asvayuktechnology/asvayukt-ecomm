@@ -28,6 +28,11 @@ const team = [
     role: "HR Officer",
     img: AppImages.team.team5,
   },
+    {
+    name: "Danien James",
+    role: "Co-founder, Chairman",
+    img: AppImages.team.team3,
+  },
 ];
 const AboutPage = () => {
   return (
@@ -137,15 +142,15 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="mt-10 lg:mt-12 flex flex-col sm:grid gap-4">
+          {/* <div className="mt-10 lg:mt-12 flex flex-col sm:grid gap-4">
             <Image
-              width={1920}
+              fill
               height={570}
               src={AppImages.about.aboutbottom}
               alt="Promo Banner"
               className="block rounded-lg"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="bg-gray-50 lg:py-20 py-10">

@@ -1,5 +1,6 @@
 import EmailInput from "@/components/ui/common/inputs/EmailInput";
 import PasswordInput from "@/components/ui/common/inputs/PasswordInput";
+import Link from "next/link";
 import React from "react";
 
 const Loginform = () => {
@@ -64,12 +65,12 @@ const Loginform = () => {
           </div>
           <div className="flex items-center justify-between">
             <div className="flex ms-auto">
-              <a
+              <Link
                 className="text-black text-end text-sm text-heading ps-3 underline hover:no-underline focus:outline-none"
-                href="/forgotpassword"
+                href="/auth/reset"
               >
                 Forgot password?
-              </a>
+              </Link>
             </div>
           </div>
           <button

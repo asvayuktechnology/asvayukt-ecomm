@@ -1,4 +1,5 @@
 import EmailInput from "@/components/ui/common/inputs/EmailInput";
+import Link from "next/link";
 import React from "react";
 
 const Recoverpassword = () => {
@@ -36,12 +37,12 @@ const Recoverpassword = () => {
 
           <div className="flex items-center justify-between">
             <div className="flex ms-auto">
-              <a
+              <Link
                 className="text-black text-end text-sm text-heading ps-3 underline hover:no-underline focus:outline-none"
-                href="/login"
+                href="/auth/login"
               >
                 login?
-              </a>
+              </Link>
             </div>
           </div>
           <button

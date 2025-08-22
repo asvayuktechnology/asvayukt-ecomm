@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -7,12 +8,12 @@ const page = () => {
         <div className="grid gap-4 mb-8 sm:grid-cols-2 grid-cols-1">
           <div className="flex h-full relative">
             <div className="flex items-center border border-gray-200 w-full rounded-lg p-4 relative">
-              <a
+              <Link
                 className="absolute top-2 right-2 bg-cyan-600 text-white px-3 py-1 rounded hover:bg-cyan-700"
                 href="/user/update-profile"
               >
                 Edit
-              </a>
+              </Link>
               <div className="flex items-center justify-center rounded-full text-xl text-center mr-4 bg-gray-200">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-xl font-bold text-center mr-4">
                   J
@@ -29,12 +30,12 @@ const page = () => {
           </div>
           <div className="flex h-full relative">
             <div className="flex items-center border border-gray-200 w-full rounded-lg p-4 relative">
-              <a
+              <Link
                 className="absolute top-2 right-2 bg-cyan-600 text-white px-3 py-1 rounded hover:bg-cyan-700"
                 href="/user/add-shipping-address?id=6439713c1d8869133e8881e9"
               >
                 Edit
-              </a>
+              </Link>
               <div className="flex-grow">
                 <h5 className="leading-none mb-2 text-base font-medium text-gray-700">
                   pnm infotech{" "}

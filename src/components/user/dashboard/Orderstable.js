@@ -61,12 +61,12 @@ const Orderstable = () => {
             <span className="text-sm font-bold">118.03</span>
           </td>
           <td className="px-5 py-3 whitespace-nowrap text-right text-sm">
-            <a
+            <Link
               className="px-3 py-1 bg-emerald-100 text-xs text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all font-semibold rounded-full"
               href="/order/685391389173d80003e5bf97"
             >
               Details
-            </a>
+            </Link>
           </td>
         </tr>
         <tr>
@@ -86,12 +86,12 @@ const Orderstable = () => {
             <span className="text-sm font-bold">1423.86</span>
           </td>
           <td className="px-5 py-3 whitespace-nowrap text-right text-sm">
-            <a
+            <Link
               className="px-3 py-1 bg-emerald-100 text-xs text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all font-semibold rounded-full"
-              href="/order/685354db7fb79500036277b8"
+              href="/order/"
             >
               Details
-            </a>
+            </Link>
           </td>
         </tr>
       </tbody>

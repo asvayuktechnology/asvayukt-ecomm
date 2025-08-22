@@ -98,11 +98,14 @@ const Header = () => {
                 </Link>
                 <span className="mx-2">|</span>
               </div>
-              <Link className="font-medium hover:text-emerald-600" href="">
+              <Link
+                className="font-medium hover:text-emerald-600"
+                href="/user/my-account"
+              >
                 My Account
               </Link>
               <span className="mx-2">|</span>
-              <button className="flex items-center font-medium hover:text-emerald-600">
+              <button className="flex items-center font-medium hover:text-emerald-600 cursor-pointer">
                 <span className="mr-1">
                   <svg
                     stroke="currentColor"
@@ -254,7 +257,7 @@ const Header = () => {
                 className="pl-5 text-white text-2xl font-bold"
                 aria-label="Login"
               >
-                <Link className="leading-none font-bold  block" href="/login">
+                <Link className="leading-none font-bold  block" href="/auth/login">
                   J
                 </Link>
               </button>

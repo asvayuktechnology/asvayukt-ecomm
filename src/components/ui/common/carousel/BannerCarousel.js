@@ -8,7 +8,6 @@ const BannerCarousel = () => {
     AppImages.banner.banner1,
     AppImages.banner.banner2,
     AppImages.banner.banner3,
-    AppImages.banner.banner4,
   ];
 
   return (

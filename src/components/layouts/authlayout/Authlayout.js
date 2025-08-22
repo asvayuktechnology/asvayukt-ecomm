@@ -13,8 +13,8 @@ const Authlayout = () => {
   let currentPage = "login";
   if (pathname.includes("/register")) {
     currentPage = "register";
-  } else if (pathname.includes("/forgotpassword")) {
-    currentPage = "forgotpassword";
+  } else if (pathname.includes("/reset")) {
+    currentPage = "reset";
     // alert(currentPage)
   }
 
@@ -32,7 +32,7 @@ const Authlayout = () => {
                         {
                           login: "Login",
                           register: "Register",
-                          forgotpassword: "Forgot Password",
+                          reset: "Forgot Password",
                         }[currentPage]
                       }
                     </h2>
@@ -42,7 +42,7 @@ const Authlayout = () => {
                           login: "Login with your email and password",
                           register:
                             "Create an account by signing up with provider or email/password",
-                          forgotpassword:
+                          reset:
                             "Enter your email to reset your password",
                         }[currentPage]
                       }
@@ -52,7 +52,7 @@ const Authlayout = () => {
                     {
                       login: <Loginform />,
                       register: <Registerfrom />,
-                      forgotpassword: <Recoverpassword />,
+                      reset: <Recoverpassword />,
                     }[currentPage]
                   }
 
@@ -86,7 +86,7 @@ const Authlayout = () => {
                     <div className="text-gray-500 mt-2.5">
                       Don&#39;t have an account?
                       <Link
-                        href="/register"
+                        href="/auth/register"
                         className="text-gray-800 hover:text-cyan-500 font-bold mx-2"
                       >
                         <span className="capitalize">Sign Up</span>

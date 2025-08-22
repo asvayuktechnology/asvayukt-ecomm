@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "@/store/slice/cartSlice";
 import QuantityCounter from "@/components/products/quantityCounter/QuantityCounter";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Cart({ isOpen, onClose }) {
   const dispatch = useDispatch();
@@ -74,12 +75,12 @@ export default function Cart({ isOpen, onClose }) {
 
                     {/* Product Info */}
                     <div className="flex flex-col w-full overflow-hidden">
-                      <a
+                      <Link
                         className="truncate text-sm font-medium text-gray-700 text-heading line-clamp-1"
                         href={`/product/${item.id}`}
                       >
                         {item.title}
-                      </a>
+                      </Link>
                       <span className="text-xs text-gray-400 mb-1">
                         Item Price ${item.price}
                       </span>

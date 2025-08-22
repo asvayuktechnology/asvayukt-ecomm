@@ -94,10 +94,10 @@ const Footer = () => {
   ];
 
   const companyLinks = [
+    { label: "Offers", href: "/offer" },
+    { label: "Product", href: "/product" },
     { label: "About Us", href: "/about-us" },
     { label: "Contact Us", href: "/contact-us" },
-    { label: "Careers", href: "/careers" },
-    { label: "Latest News", href: "/news" },
   ];
 
   const companyLinks2 = [
@@ -108,10 +108,10 @@ const Footer = () => {
   ];
 
   const companyLinks3 = [
-    { label: "Dashboard", href: "/dashboard" },
-    { label: "My Orders", href: "/my-orders" },
-    { label: "Recent Orders", href: "/recent-orders" },
-    { label: "Update Profile", href: "/update-profile" },
+    { label: "Dashboard", href: "/user/dashboard" },
+    { label: "My Orders", href: "/user/my-orders" },
+    { label: "Recent Orders", href: "/user/recent-orders" },
+    { label: "Update Profile", href: "/user/update-profile" },
   ];
 
   const socialLinks = [
@@ -211,11 +211,11 @@ const Footer = () => {
                   <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
                     987 Andre Plain Suite High Street 838, Lake Hestertown, USA
                     <br />
-                    <a href="tel:7854215478"> Tel : 7854215478</a>
+                    <Link href="tel:7854215478"> Tel : 7854215478</Link>
                     <br />
-                    <a href="mailto: ccruidk@test.com">
+                    <Link href="mailto: ccruidk@test.com">
                       Email : ccruidk@test.com
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -238,9 +238,7 @@ const Footer = () => {
                       key={i}
                       className="flex items-center mr-3 transition ease-in-out duration-500"
                     >
-                      <a
-                        aria-label="Social Link"
-                        rel="noreferrer"
+                      <Link
                         target="_blank"
                         className="block text-center mx-auto text-gray-500 hover:text-white"
                         href={social.href}
@@ -254,7 +252,7 @@ const Footer = () => {
                           ></circle>
                           {social.icon}
                         </svg>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -267,7 +265,7 @@ const Footer = () => {
                   Call Us Today!
                 </p>
                 <h5 className="text-2xl font-bold text-emerald-500 leading-7">
-                  <a href="tel:7854215478">+91 7854215478</a>
+                  <Link href="tel:7854215478">+91 7854215478</Link>
                 </h5>
               </div>
             </div>

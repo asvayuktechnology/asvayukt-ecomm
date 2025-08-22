@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FiMail, FiUser, FiMapPin } from "react-icons/fi";
 import contactImg from "../../../../public/images/contact-us.png";
+import Link from "next/link";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -45,12 +46,12 @@ const ContactPage = () => {
               </span>
               <h5 className="text-xl mb-2 font-bold text-black">Email Us</h5>
               <p className="mb-0 text-base opacity-90 leading-7  text-black">
-                <a
+                <Link
                   href="mailto:info@kachabazar.com"
                   className="text-emerald-500"
                 >
                   info@kachabazar.com
-                </a>{" "}
+                </Link>{" "}
                 Interactively grow empowered for process-centric total linkage.
               </p>
             </div>
@@ -61,9 +62,9 @@ const ContactPage = () => {
               </span>
               <h5 className="text-xl mb-2 font-bold  text-black">Call Us</h5>
               <p className="mb-0 text-base opacity-90 leading-7  text-black">
-                <a href="tel:029-00124667" className="text-emerald-500">
+                <Link href="tel:029-00124667" className="text-emerald-500">
                   029-00124667
-                </a>{" "}
+                </Link>{" "}
                 Distinctively disseminate focused solutions clicks-and-mortar
                 ministate.
               </p>

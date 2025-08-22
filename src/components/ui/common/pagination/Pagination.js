@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Pagination = () => {
@@ -6,7 +7,7 @@ const Pagination = () => {
       <div className="paginationOrder">
         <ul className="pagination" role="navigation" aria-label="Pagination">
           <li className="page-item disabled">
-            <a
+            <Link
               className="page-previous-link "
               tabIndex={-1}
               role="button"
@@ -15,10 +16,10 @@ const Pagination = () => {
               rel="prev"
             >
               Previous
-            </a>
+            </Link>
           </li>
           <li className="page--item activePagination">
-            <a
+            <Link
               rel="canonical"
               role="button"
               className="page--link"
@@ -27,10 +28,10 @@ const Pagination = () => {
               aria-current="page"
             >
               1
-            </a>
+            </Link>
           </li>
           <li className="page--item">
-            <a
+            <Link
               rel="next"
               role="button"
               className="page--link"
@@ -38,60 +39,60 @@ const Pagination = () => {
               aria-label="Page 2"
             >
               2
-            </a>
+            </Link>
           </li>
           <li className="page--item">
-            <a
+            <Link
               role="button"
               className="page--link"
               tabIndex={0}
               aria-label="Page 3"
             >
               3
-            </a>
+            </Link>
           </li>
           <li className="page--item">
-            <a
+            <Link
               className="page--link"
               role="button"
               tabIndex={0}
               aria-label="Jump forward"
             >
               ...
-            </a>
+            </Link>
           </li>
           <li className="page--item">
-            <a
+            <Link
               role="button"
               className="page--link"
               tabIndex={0}
               aria-label="Page 91"
             >
               91
-            </a>
+            </Link>
           </li>
           <li className="page--item">
-            <a
+            <Link
               role="button"
               className="page--link"
               tabIndex={0}
               aria-label="Page 92"
             >
               92
-            </a>
+            </Link>
           </li>
           <li className="page--item">
-            <a
+            <Link
               role="button"
               className="page--link"
               tabIndex={0}
               aria-label="Page 93"
             >
               93
-            </a>
+            </Link>
           </li>
           <li className="page-item">
-            <a
+            <Link
               className="page-next-link"
               tabIndex={0}
               role="button"
@@ -100,7 +101,7 @@ const Pagination = () => {
               rel="next"
             >
               Next
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
